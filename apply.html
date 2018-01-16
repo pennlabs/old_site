@@ -29,8 +29,8 @@
           <div class="navbar-end">
             <a class="navbar-item" href="./team.html">Team</a>
             <a class="navbar-item" href="./products.html">Products</a>
-            <a class="navbar-item is-active" href="#">Docs</a>
-            <a class="navbar-item" href="#">Contact</a>
+            <a class="navbar-item" href="./docs.html">Docs</a>
+            <a class="navbar-item" href="./contact.html">Contact</a>
           </div>
         </div>
       </div>
@@ -41,47 +41,159 @@
         <div class="levels">
           <div class="level-left">
             <div class="level-item">
-              <h3 class="title is-3" style="margin-bottom:0.5rem">Documentation</h3>
+              <h3 class="title is-3" style="margin-bottom:0.5rem">Penn Labs Application<br> <p class="subtitle is-5">Spring 2018</p></h3>
             </div>
             <div class="level-item">
               <p class="image">
-                <img src="./img/undraw_data.png" style="height:10rem; width:auto">
+                <img src="./img/undraw_welcome.png" style="height:8rem; width:auto">
               </p>
             </div>
           </div>
         </div>
-        <p>Something something documentation</p>
+        <p>Submit your application by midnight on Friday, January 20.</p>
         <br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>API</th>
-              <th>Docs</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Penn Course Review API</td>
-              <td><a href="pcr.html">Docs</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData Python SDK</td>
-              <td><a href="https://github.com/pennlabs/penn-sdk-python">Docs and Source</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData Node SDK</td>
-              <td><a href="https://github.com/pennlabs/penn-sdk-node">Docs and Source</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData Ruby SDK (alpha)</td>
-              <td><a href="https://github.com/pennlabs/penn-sdk-ruby">Docs and Source</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData APIs</td>
-              <td><a href="https://esb.isc-seo.upenn.edu/8091/documentation#directory">Docs</a></td>
-          </tbody>
-        </table>
+        
+        <div class="container is-fluid">
+          <div class="field">
+            <label class="label">Name *</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="First and last">
+            </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Email *</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e@mail.com">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Phone *</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="123-456-7890">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Year of graduation *</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>2018</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">School(s) *</label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              College
+            </label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Engineering
+            </label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Nursing
+            </label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Wharton
+            </label>
+          </div>
+
+          <div class="field">
+            <label class="label">Major(s) *</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Feel free to include minors as well">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">(Optional) Dual degree programs</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option></option>
+                  <option>AI</option>
+                  <option>Huntsman</option>
+                  <option>LSM</option>
+                  <option>M&T</option>
+                  <option>MLS</option>
+                  <option>VIPER</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!--part 2-->
+
+          <div class="field">
+            <label class="label is-marginless">Why Penn Labs? *</label>
+            <p style="margin-bottom:0.5rem">Tell us why you want to be a part of the team. What excites you most? What will you bring to the team?</p>
+            <div class="control">
+              <textarea class="textarea" placeholder="Text area"></textarea>
+            </div>
+            <p class="help"> (150 words or less)</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Preferred roles *</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option></option>
+                  <option>Design</option>
+                  <option>Software engineering (iOS dev)</option>
+                  <option>Software engineering (web dev)</option>
+                  <option>Videography</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                I agree to the <a href="#">terms and conditions</a>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="question">
+                Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="question">
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-info is-rounded">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-text">Cancel</button>
+            </div>
+          </div>   
+        </div>     
       </div>
     </section>
+
+
     <footer class="footer" style="padding-bottom:3rem">
       <div class="container">
         <div class="content has-text-centered">
