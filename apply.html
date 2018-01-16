@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
   <style>
+    .field {
+      width:50%;
+      padding-bottom:2rem;
+    }
   </style>
   </head>
 
@@ -133,7 +137,7 @@
             </div>
           </div>
 
-          <!--part 2-->
+          <!--part 2, short answer-->
 
           <div class="field">
             <label class="label is-marginless">Why Penn Labs? *</label>
@@ -145,19 +149,80 @@
           </div>
 
           <div class="field">
-            <label class="label">Preferred roles *</label>
+            <label class="label">Preferred role(s) *</label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Design
+            </label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Software engineering (iOS dev)
+            </label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Software engineering (web dev)
+            </label>
+            <label class="checkbox" style="padding-right:1rem">
+              <input type="checkbox">
+              Videography
+            </label>
+          </div>
+
+          <div class="field">
+            <label class="label is-marginless">What significant projects have you completed in the realm of your preferred role(s)? *</label>
+            <p style="margin-bottom:0.5rem">Please list them and describe in one or two sentences.</p>
             <div class="control">
-              <div class="select">
-                <select>
-                  <option></option>
-                  <option>Design</option>
-                  <option>Software engineering (iOS dev)</option>
-                  <option>Software engineering (web dev)</option>
-                  <option>Videography</option>
-                </select>
-              </div>
+              <textarea class="textarea" placeholder="Text area"></textarea>
             </div>
           </div>
+
+          <div class="field">
+            <label class="label is-marginless">Technical tools and familiarity *</label>
+            <p style="margin-bottom:0.5rem">List skills relevant to your preferred role(s) on a scale of 1-5 
+            (1 = beginner, 5 = expert): Java - 5, Photoshop - 4, etc.</p>
+            <div class="control">
+              <textarea class="textarea" placeholder="Text area"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label is-marginless">What unique skills/talents/personality traits do you bring to Penn Labs? *</label>
+            <p style="margin-bottom:0.5rem">Feel free to be creative!</p>
+            <div class="control">
+              <textarea class="textarea" placeholder="Text area"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label is-marginless">Commitments *</label>
+            <p style="margin-bottom:0.5rem">Other on-campus commitments. Please list as: Commitment - # of hours/wk</p>
+            <div class="control">
+              <textarea class="textarea" placeholder="Text area"></textarea>
+            </div>
+          </div>
+
+          <!--part 3, external links to show off-->
+          <div class="field">
+            <label class="label">Github</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Link here">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Portfolio</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Link here">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Personal site</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Link here">
+            </div>
+          </div>
+
 
           <div class="field">
             <div class="control">
