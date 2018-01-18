@@ -15,7 +15,7 @@
     <nav class="navbar is-info" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="./index.html">
-          <img src="./img/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" height="28">
+          <img src="./img/beaker-only.png" alt="Penn Labs">
         </a>
 
         <button class="button navbar-burger">
@@ -38,37 +38,47 @@
 
     <section class="section">
       <div class="container">
-        <h3 class="title is-3" style="margin-bottom:0.5rem">Contact Us</h3>
-        <p>We build tools for Penn students. Your feedback as users means everything to us. <br> Is there something we can do better? Is there a way we can make life at Penn better for you? Want to learn more about Labs? Submit bug fixes, new feature suggestions, and other comments here!</p>
+        <div class="levels">
+          <div class="level-left">
+            <div class="level-item">
+              <h3 class="title is-3" style="margin-bottom:0.5rem">Contact Us</h3>
+            </div>
+            <div class="level-item">
+              <p class="image">
+                <img src="./img/undraw_mailbox.png" style="height:10rem; width:auto">
+              </p>
+            </div>
+          </div>
+        </div>
+        <p>We build tools for Penn students. Your feedback as users means everything to us. <br> Is there something we can do better? Want to learn more about Labs? Submit bug fixes, new feature suggestions, questions, and comments here!</p>
         <br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>API</th>
-              <th>Docs</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Penn Course Review API</td>
-              <td><a href="pcr.html">Docs</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData Python SDK</td>
-              <td><a href="https://github.com/pennlabs/penn-sdk-python">Docs and Source</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData Node SDK</td>
-              <td><a href="https://github.com/pennlabs/penn-sdk-node">Docs and Source</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData Ruby SDK (alpha)</td>
-              <td><a href="https://github.com/pennlabs/penn-sdk-ruby">Docs and Source</a></td>
-            </tr>
-            <tr>
-              <td>Penn OpenData APIs</td>
-              <td><a href="https://esb.isc-seo.upenn.edu/8091/documentation#directory">Docs</a></td>
-          </tbody>
-        </table>
+        <div style="width:50%">
+          <form action="https://formspree.io/contact@pennlabs.org" method="POST">
+            <div class="field">
+                <label class="label has-text-weight-semibold">Name (optional)</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Hi there!" name="name">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label has-text-weight-semibold">Email (optional)</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="We'll send our response here" name="email">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label has-text-weight-semibold">Message</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="What's up?" name="message"></textarea>
+                </div>
+            </div>
+            <div class="field" style="width:100%">
+                <div class="control clear" style="text-align:right">
+                    <button class="button is-primary is-rounded">Send</button>
+                </div>
+            </div>
+          </form>
+        </div>
         <br>
         <p style="padding-bottom:0.5rem">We accept donations to support our work. Your contribution is greatly appreciated.</p>
         <a class="button is-primary is-rounded">Support Penn Labs</a>
