@@ -9,15 +9,26 @@ app.use(body_parser.json());
 
 app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-app.use(express.static('views/img')); 
+app.use(express.static(__dirname + '/views/img')); 
 
 app.get('/', (req, res) => {
   res.render('splash');
 });
 
-app.get('/person/:id', (req, res) => {
-  const arun = { name: "Arun Kirubarajan", about: "from Canada or something", team: "PennBasics" };
-  res.render('person', arun);
+app.get('/team', (req, res) => {
+  res.render('team');
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+app.get('/docs', (req, res) => {
+  res.render('docs');
+});
+
+app.get('/products', (req, res) => {
+  res.render('products');
 });
 
 app.get('*', (req, res) => {
