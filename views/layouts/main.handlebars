@@ -2,10 +2,76 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Penn Tech Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Penn Labs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+    <style>
+      .hero.home {
+        background-image: url(test-hero.png);
+      }
+
+      .hero.has-image-bg {
+        color: #fff;
+        background-position: 10%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #b8c6d0;
+      }
+
+      .white {
+        color: #fff;
+      }
+
+      #join-link {
+        color: #fff;
+      }
+
+      #join-link:hover {
+        color: #03A9F4;
+      }
+
+      .card {
+        margin-bottom: 1.5rem;
+      }
+    </style>
   </head>
 
+  
   <body>
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="beaker-only.png" alt="Penn Labs" height="100px" width="auto">
+        </a>
+
+        <button class="button navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="navbar-menu">
+          <div class="navbar-start"></div>
+          <div class="navbar-end">
+            <a class="navbar-item" href="/team">Team</a>
+            <a class="navbar-item" href="/products">Products</a>
+            <a class="navbar-item" href="/docs">Docs</a>
+            <a class="navbar-item" href="/contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     {{{ body }}}
+
+    <footer class="footer" style="padding-bottom:3rem">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p style="font-size:0.85rem">Made with <span class="icon is-small" style="color:#F56F71"><i class="fa fa-heart"></i></span> by Penn Labs</p> 
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
