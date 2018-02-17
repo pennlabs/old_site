@@ -4,19 +4,22 @@
     <p> The brilliant minds behind the products that tens of thousands
       of students use. Also check out our <a href="/alumni">Alumni</a>!</p>
     <br>
-    <div class="columns">
+    <div class="columns is-multiline">
     {{#each members}}
-      <div class="column">
+      <div class="column is-one-third">
         <a href="/team/{{this.username}}">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/members/{{this.username}}.png" alt="Placeholder image">
+                <img src="/members/{{this.username}}.png" style="max-width:100%; object-fit: cover;" alt="Placeholder image">
               </figure>
             </div>
             <div class="card-content">
-              <h1 style="font-weight:500; font-size:1.5rem">{{this.name}}</h1>
-              <h4 style="padding-bottom:0.8rem">{{this.major}}</h4>
+              <h1 style="font-weight:500; font-size:1.5rem; margin-bottom: 1rem">{{this.name}}</h1>
+              <div class="tags">
+                <span class="tag is-rounded">{{this.major}}</span>
+                <span class="tag is-rounded">{{this.role}}</span>
+              </div>
             </div>
           </div>
         </a>
