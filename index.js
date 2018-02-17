@@ -20,12 +20,16 @@ app.get('/', (req, res) => {
   res.render('splash');
 });
 
-app.get('/team', (req, res) => {  
-  mongoose.model('Member').find({}, (err, members) => {
-    console.log(members);
+app.get('/team/:username', (req, res) => {  
+  mongoose.model('Member').findOne({username: req.params.username}, (err, member) => {
+    res.render('member', member);
   });
+});
 
-  res.render('team');
+app.get('/team', (req, res) => {
+  mongoose.model('Member').find({}, (err, members) => {
+    res.render('team', { members });
+  });
 });
 
 app.get('/contact', (req, res) => {
