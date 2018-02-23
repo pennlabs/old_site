@@ -10,6 +10,17 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <style>
+      html, body {
+         margin:0;
+         padding:0;
+         height:100%;
+      }
+
+      #contains-all {
+        min-height:100%;
+        position:relative;
+      }
+
       .hero.home {
         background-image: url(test-hero.png);
       }
@@ -38,8 +49,17 @@
         margin-bottom: 1.5rem;
       }
 
+      #body {
+        padding-bottom: 8rem;
+      }
+
       .footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
         padding-bottom: 2rem;
+        height: 8rem;
       }
 
       .footer a {
@@ -50,45 +70,50 @@
 
   
   <body>
-    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="/beaker-only.png" alt="Penn Labs" height="100px" width="auto">
-        </a>
+    <div id="contains-all">
+      <div id="body">
+        <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <img src="/beaker-only.png" alt="Penn Labs" height="100px" width="auto">
+            </a>
 
-        <div class="button navbar-burger is-info">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+            <div class="button navbar-burger is-info">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="navbar-menu">
+            <div class="navbar-start"></div>
+            <div class="navbar-end">
+              <a class="navbar-item" href="/team">Team</a>
+              <a class="navbar-item" href="/products">Products</a>
+              <a class="navbar-item" href="/docs">Docs</a>
+              <a class="navbar-item" href="https://medium.com/@pennappslabs">Blog</a>
+              <a class="navbar-item" href="/contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+
+      {{{ body }}}
+
       </div>
 
-      <div class="navbar-menu">
-        <div class="navbar-start"></div>
-        <div class="navbar-end">
-          <a class="navbar-item" href="/team">Team</a>
-          <a class="navbar-item" href="/products">Products</a>
-          <a class="navbar-item" href="/docs">Docs</a>
-          <a class="navbar-item" href="https://medium.com/@pennappslabs">Blog</a>
-          <a class="navbar-item" href="/contact">Contact</a>
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <p style="font-size:0.85rem">Made with <span class="icon is-small" style="color:#F56F71"><i class="fa fa-heart"></i></span> by Penn Labs</p>
+            <a href="https://github.com/pennlabs/" style="margin-right:1rem">
+              <span><i class="fab fa-github"></i></span>
+            </a>
+            <a href="https://www.facebook.com/labsatpenn/">
+              <span><i class="fab fa-facebook-square"></i></span>
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    {{{ body }}}
-
-    <footer class="footer is-fixed-bottom">
-      <div class="container">
-        <div class="content has-text-centered">
-          <p style="font-size:0.85rem">Made with <span class="icon is-small" style="color:#F56F71"><i class="fa fa-heart"></i></span> by Penn Labs</p>
-          <a href="https://github.com/pennlabs/" style="margin-right:1rem">
-            <span><i class="fab fa-github"></i></span>
-          </a>
-          <a href="https://www.facebook.com/labsatpenn/">
-            <span><i class="fab fa-facebook-square"></i></span>
-          </a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
