@@ -7,9 +7,9 @@
 - body-parser
 
 ## Usage
-0. Create a file named `.env` and add `PORT=3000`. 
+0. Create a file named `.env` containing `PORT` and `DB_URI`. 
 1. `yarn` (install dependencies).
-2. `yarn begin` (if you have nodemon installed) or `yarn start` if you don't want live-reloading.
+2. `yarn begin` (if you have nodemon installed) or `yarn start` if you don't have `nodemon` installed.
 
 ## About
 1. Routes are defined in `index.js` to map URLs to handlebar templates.
