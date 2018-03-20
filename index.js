@@ -48,6 +48,10 @@ app.get('/mobile', (req, res) => {
   res.redirect('products');
 });
 
+app.get('/mobile/*', (req, res) => {
+  res.redirect('../products');
+});
+
 app.get('*', (req, res) => {
   res.render('error');
 });
