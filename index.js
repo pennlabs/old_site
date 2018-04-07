@@ -16,7 +16,9 @@ app.use(body_parser.urlencoded({ extended: true }));
 app.use(body_parser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
+app.engine('handlebars', handlebars({
+  defaultLayout: 'main',
+}));
 app.set('view engine', 'handlebars');
 
 models.connect(process.env.DB_URI);
