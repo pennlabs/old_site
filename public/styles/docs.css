@@ -1,0 +1,40 @@
+.docs-wrapper {
+  display: flex; }
+  .docs-wrapper .sidebar {
+    width: auto;
+    padding: 1rem;
+    box-shadow: 0.2rem 0rem 0.4rem rgba(0, 0, 0, 0.05);
+    min-height: calc(100vh - 52px);
+    height: 100%;
+    min-width: 20vw; }
+    .docs-wrapper .sidebar section {
+      padding: 0.5rem 0rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .docs-wrapper .sidebar section h4 {
+        margin-bottom: 0.2rem; }
+      .docs-wrapper .sidebar section .route {
+        font-family: "Lucida Console", Monaco, monospace;
+        padding: 0.4rem;
+        margin: 0rem -0.4rem;
+        border-radius: 0.2rem; }
+        .docs-wrapper .sidebar section .route:hover {
+          background: rgba(0, 0, 0, 0.025); }
+        .docs-wrapper .sidebar section .route:focus, .docs-wrapper .sidebar section .route:active {
+          background: rgba(0, 0, 0, 0.05); }
+        .docs-wrapper .sidebar section .route span {
+          border-radius: 0.2rem;
+          padding: 0.2rem 0.4rem;
+          color: white;
+          background: rgba(0, 0, 0, 0.05); }
+          .docs-wrapper .sidebar section .route span.get {
+            background: #76bf96; }
+          .docs-wrapper .sidebar section .route span.post {
+            background: #df5d56; }
+        .docs-wrapper .sidebar section .route p {
+          padding-bottom: 0.2rem;
+          display: inline-block;
+          margin-bottom: 0rem; }
+  .docs-wrapper .docs {
+    flex: 1;
+    padding: 1rem 5%;
+    min-height: calc(100vh - 52px); }
