@@ -7,7 +7,6 @@ const env = require('dotenv');
 const path = require('path');
 const models = require('./models');
 const app = express();
-const path = require('path');
 
 // Configure environment variables
 env.config();
@@ -21,8 +20,7 @@ app.engine('handlebars', handlebars({
   defaultLayout: 'main',
 }));
 app.set('view engine', 'handlebars');
-app.use(express.static(__dirname + '/views/img'));
-app.use('/static', express.static(path.join(__dirname, 'views/static'));
+app.use('/static', express.static(path.join(__dirname, 'views/static')));
 
 models.connect(process.env.DB_URI);
 
