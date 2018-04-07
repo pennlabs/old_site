@@ -1,0 +1,16 @@
+/**
+ * Styling for the footer
+ */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 2rem;
+  height: 8rem;
+}
+
+.footer a {
+  display: inline-block;
+}
