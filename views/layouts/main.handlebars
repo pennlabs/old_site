@@ -1,110 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Penn Labs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/ >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/app.css" />
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
-    <style>
-      html, body {
-         margin:0;
-         padding:0;
-         height:100%;
-      }
-
-      #contains-all {
-        min-height:100%;
-        position:relative;
-      }
-
-      .hero.home {
-        background-image: url(test-hero.png);
-      }
-
-      .hero.has-image-bg {
-        color: #fff;
-        background-position: 10%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: #b8c6d0;
-      }
-
-      .white {
-        color: #fff;
-      }
-
-      #join-link {
-        color: #fff;
-      }
-
-      #join-link:hover {
-        color: #03A9F4;
-      }
-
-      .box {
-        margin-bottom: 1.5rem;
-      }
-
-      #body {
-        padding-bottom: 8rem;
-      }
-
-      .footer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding-bottom: 2rem;
-        height: 8rem;
-      }
-
-      .footer a {
-        display: inline-block;
-      }
-    </style>
   </head>
 
-  
   <body>
     <div id="contains-all">
       <div id="body">
         <nav class="navbar is-info" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="/">
-              <img src="/beaker-only.png" alt="Penn Labs" height="100px" width="auto">
+              <img
+                src="/img/beaker-only.png"
+                alt="Penn Labs"
+                height="100px"
+                width="auto"
+              />
             </a>
 
-            <div class="button navbar-burger is-info">
+            <div class="button navbar-burger is-info" data-target="navMenu">
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
 
-          <div class="navbar-menu">
+          <div class="navbar-menu" id="navMenu">
             <div class="navbar-start"></div>
             <div class="navbar-end">
-              <a class="navbar-item" href="/team">Team</a>
-              <a class="navbar-item" href="/products">Products</a>
-              <a class="navbar-item" href="/docs">Docs</a>
-              <a class="navbar-item" href="https://medium.com/@pennappslabs">Blog</a>
-              <a class="navbar-item" href="/contact">Contact</a>
+              <a class="navbar-item" href="/team">
+                Team
+              </a>
+              <a class="navbar-item" href="/products">
+                Products
+              </a>
+              <a class="navbar-item" href="/docs">
+                Docs
+              </a>
+              <a class="navbar-item" href="https://medium.com/@pennappslabs">
+                Blog
+              </a>
+              <a class="navbar-item" href="/contact">
+                Contact
+              </a>
             </div>
           </div>
         </nav>
 
-      {{{ body }}}
+        {{{ body }}}
 
       </div>
 
       <footer class="footer">
         <div class="container">
           <div class="content has-text-centered">
-            <p style="font-size:0.85rem">Made with <span class="icon is-small" style="color:#F56F71"><i class="fa fa-heart"></i></span> by Penn Labs</p>
+            <p style="font-size:0.85rem">
+              Made with <span class="icon is-small" style="color:#F56F71"><i class="fa fa-heart"></i></span> by Penn Labs
+            </p>
             <a href="https://github.com/pennlabs/" style="margin-right:1rem">
               <span><i class="fab fa-github"></i></span>
             </a>
@@ -115,5 +74,31 @@
         </div>
       </footer>
     </div>
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+          // Add a click event on each of them
+          $navbarBurgers.forEach(function($el) {
+            $el.addEventListener('click', function() {
+
+              // Get the target from the "data-target" attribute
+              var target = $el.dataset.target;
+              var $target = document.getElementById(target);
+
+              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+              $el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
