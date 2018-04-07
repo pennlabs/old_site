@@ -3,6 +3,7 @@ const handlebars = require('express-handlebars');
 const body_parser = require('body-parser');
 const mongoose = require('mongoose');
 const env = require('dotenv');
+const path = require('path');
 const models = require('./models');
 const app = express();
 env.config();
@@ -13,6 +14,7 @@ app.use(body_parser.json());
 app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/views/img')); 
+app.use('/static', express.static(path.join(__dirname, 'views/static'));
 
 models.connect(process.env.DB_URI);
 
@@ -42,6 +44,10 @@ app.get('/docs', (req, res) => {
 
 app.get('/products', (req, res) => {
   res.render('products');
+});
+
+app.get('/docs/api', (req, res) => {
+  res.render('docs_page');
 });
 
 app.get('/mobile', (req, res) => {
