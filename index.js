@@ -3,6 +3,7 @@ const handlebars = require('express-handlebars');
 const body_parser = require('body-parser');
 const mongoose = require('mongoose');
 const env = require('dotenv');
+const path = require('path');
 const models = require('./models');
 const app = express();
 env.config();
@@ -43,6 +44,8 @@ app.get('/docs', (req, res) => {
 app.get('/products', (req, res) => {
   res.render('products');
 });
+
+app.use('/static', express.static(path.join(__dirname, 'views/static')))
 
 app.get('/mobile', (req, res) => {
   res.redirect('products');
