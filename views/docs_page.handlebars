@@ -20,6 +20,27 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <h4 class="is-size-4">
+        GSR Booking
+      </h4>
+      <div class="toggle" data-toggle="gsr"></div>
+      <div class="routes" id="gsr">
+        <div class="route">
+          <span class="get">GET</span>
+          <p>locations_by_day</p>
+        </div>
+        <div class="route">
+          <span class="get">GET</span>
+          <p>get_hours</p>
+        </div>
+        <div class="route">
+          <span class="post">POST</span>
+          <p>book_room</p>
+        </div>
+      </div>
+    </section>
   </div>
   <div class="docs">
     <h3 class="is-size-3 has-text-weight-semibold">
@@ -152,13 +173,21 @@
 </div>
 
 <script>
+  // Find all toggles in the sidebar
   var toggles = document.getElementsByClassName('toggle');
+
+  // Iterate over all toggles
   var i;
   for (i = 0; i < toggles.length; i++) {
     var toggle = toggles[i];
+
+    // Add a click event listener
     toggle.onclick = function() {
+      // Isolate the portion of routes that the toggle refers to
       var section = this.getAttribute('data-toggle');
       var routes = document.getElementById(section);
+
+      // Toggle the 'hidden' class for both the toggle and routes
       this.classList.toggle('hidden');
       routes.classList.toggle('hidden');
     }
