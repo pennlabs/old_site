@@ -9,10 +9,29 @@
     min-height: calc(100vh - 52px);
     min-width: 20vw; }
     .docs-wrapper .sidebar section {
-      padding: 0.5rem 0rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      padding: 0.5rem 0rem; }
+      .docs-wrapper .sidebar section + section {
+        border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      .docs-wrapper .sidebar section .toggle {
+        cursor: hand;
+        cursor: pointer;
+        transform: translateY(-2rem) translateX(-0.1rem) rotate(-45deg);
+        width: 1rem;
+        height: 1rem;
+        border-left: 2px solid #209cee;
+        border-bottom: 2px solid #209cee;
+        float: right;
+        transition: all 0.2s ease; }
+        .docs-wrapper .sidebar section .toggle.hidden {
+          transform: translateY(-1.6rem) translateX(0.1rem) rotate(135deg); }
       .docs-wrapper .sidebar section h4 {
         margin-bottom: 0.2rem; }
+      .docs-wrapper .sidebar section .routes {
+        max-height: 100vh;
+        transition: all 0.2s ease;
+        overflow: hidden !important; }
+        .docs-wrapper .sidebar section .routes.hidden {
+          max-height: 0rem; }
       .docs-wrapper .sidebar section .route {
         font-family: "Lucida Console", Monaco, monospace;
         padding: 0.4rem;
@@ -52,6 +71,10 @@
       box-shadow: none;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem; }
+    .docs-wrapper .gray .select {
+      width: 100%; }
+      .docs-wrapper .gray .select select {
+        width: 100%; }
     .docs-wrapper .gray .is-light {
       background: rgba(0, 0, 0, 0.075); }
       .docs-wrapper .gray .is-light:hover {

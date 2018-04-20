@@ -4,17 +4,20 @@
       <h4 class="is-size-4">
         Dining
       </h4>
-      <div class="route">
-        <span class="get">GET</span>
-        <p>get_hours</p>
-      </div>
-      <div class="route">
-        <span class="get">GET</span>
-        <p>get_menus</p>
-      </div>
-      <div class="route">
-        <span class="get">GET</span>
-        <p>get_halls</p>
+      <div class="toggle" data-toggle="dining"></div>
+      <div class="routes" id="dining">
+        <div class="route">
+          <span class="get">GET</span>
+          <p>get_hours</p>
+        </div>
+        <div class="route">
+          <span class="get">GET</span>
+          <p>get_menus</p>
+        </div>
+        <div class="route">
+          <span class="get">GET</span>
+          <p>get_halls</p>
+        </div>
       </div>
     </section>
   </div>
@@ -147,3 +150,17 @@
     </div>
   </div>
 </div>
+
+<script>
+  var toggles = document.getElementsByClassName('toggle');
+  var i;
+  for (i = 0; i < toggles.length; i++) {
+    var toggle = toggles[i];
+    toggle.onclick = function() {
+      var section = this.getAttribute('data-toggle');
+      var routes = document.getElementById(section);
+      this.classList.toggle('hidden');
+      routes.classList.toggle('hidden');
+    }
+  }
+</script>
