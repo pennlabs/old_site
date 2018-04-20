@@ -1,11 +1,12 @@
 .docs-wrapper {
   display: flex; }
+  .docs-wrapper .marg-bot {
+    margin-bottom: 1.5rem; }
   .docs-wrapper .sidebar {
     width: auto;
     padding: 1rem;
-    box-shadow: 0.2rem 0rem 0.4rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0.1rem 0rem 0.3rem rgba(0, 0, 0, 0.1);
     min-height: calc(100vh - 52px);
-    height: 100%;
     min-width: 20vw; }
     .docs-wrapper .sidebar section {
       padding: 0.5rem 0rem;
@@ -16,7 +17,9 @@
         font-family: "Lucida Console", Monaco, monospace;
         padding: 0.4rem;
         margin: 0rem -0.4rem;
-        border-radius: 0.2rem; }
+        border-radius: 0.2rem;
+        cursor: hand;
+        cursor: pointer; }
         .docs-wrapper .sidebar section .route:hover {
           background: rgba(0, 0, 0, 0.025); }
         .docs-wrapper .sidebar section .route:focus, .docs-wrapper .sidebar section .route:active {
@@ -32,9 +35,24 @@
             background: #df5d56; }
         .docs-wrapper .sidebar section .route p {
           padding-bottom: 0.2rem;
+          padding-top: 0.2rem;
           display: inline-block;
           margin-bottom: 0rem; }
   .docs-wrapper .docs {
     flex: 1;
     padding: 1rem 5%;
     min-height: calc(100vh - 52px); }
+  .docs-wrapper .gray {
+    padding: 2rem;
+    border-radius: 0.4rem;
+    background: #f2f4f8; }
+    .docs-wrapper .gray .label {
+      font-weight: normal; }
+    .docs-wrapper .gray .input {
+      box-shadow: none;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem; }
+    .docs-wrapper .gray .is-light {
+      background: rgba(0, 0, 0, 0.075); }
+      .docs-wrapper .gray .is-light:hover {
+        background: rgba(0, 0, 0, 0.1); }

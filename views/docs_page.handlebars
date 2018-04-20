@@ -1,10 +1,149 @@
 <div class="docs-wrapper">
   <div class="sidebar">
-    This is the sidebar
+    <section>
+      <h4 class="is-size-4">
+        Dining
+      </h4>
+      <div class="route">
+        <span class="get">GET</span>
+        <p>get_hours</p>
+      </div>
+      <div class="route">
+        <span class="get">GET</span>
+        <p>get_menus</p>
+      </div>
+      <div class="route">
+        <span class="get">GET</span>
+        <p>get_halls</p>
+      </div>
+    </section>
   </div>
   <div class="docs">
-    <h2 class="is-size-2">
+    <h3 class="is-size-3 has-text-weight-semibold">
       Welcome to the Penn Labs API!
-    </h2>
+    </h3>
+    <h4 class="is-size-4">
+      Built by Penn students to empower Penn developers
+    </h4>
+    <br></br>
+    <p>
+      The Penn Labs API was developed to support Penn student developers in creating high impact products for the community. Our mission is to build products that connect, engage, and improve the Penn community, and we beleive that there is still so much to be done outside of Penn Labs. Therefore, we've developed an API that includes information from OpenData, LibCal, Penn Laundry, and more. We look forward to seeing what you build!
+    </p>
+    <br></br>
+    <div class="columns">
+      <div class="column is-three-quarters-desktop">
+        <form class="gray">
+          <h5 class="is-size-4 marg-bot title">
+            Get access with Penn credentials
+          </h5>
+
+          <!-- Render form fields -->
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">
+                  Penn email address
+                </label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="email"
+                    name="email"
+                    placeholder="labs@school.upenn.edu"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">
+                  Password
+                </label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="password"
+                    name="password"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">
+                  Penn email address
+                </label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="password"
+                    name="confirm-password"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <!-- Second column of fields -->
+              <div class="field">
+                <label class="label">Year</label>
+                <div class="control">
+                  <div class="select" name="year">
+                    <select>
+                      <option>2018</option>
+                      <option>2019</option>
+                      <option>2020</option>
+                      <option>2021</option>
+                      <option>2022</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">
+                  School
+                </label>
+                <div class="control">
+                  <div class="select" name="school">
+                    <select>
+                      <option>Annenberg</option>
+                      <option>Arts & Sciences</option>
+                      <option>Dental Medicine</option>
+                      <option>Design</option>
+                      <option>Engineering & Applied Science</option>
+                      <option>Graduate School of Education</option>
+                      <option>Law School</option>
+                      <option>Nursing</option>
+                      <option>Perelman School of Medicine</option>
+                      <option>Social Policy & Practice</option>
+                      <option>Veterinary Medicine</option>
+                      <option>Wharton</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Render buttons to submit the form -->
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-light is-medium">
+                Login
+              </button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-medium">
+                Register
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Extra spacing at the bottom -->
+        <br></br>
+      </div>
+    </div>
   </div>
 </div>
