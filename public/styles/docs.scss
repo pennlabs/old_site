@@ -50,6 +50,9 @@ $blue-gray: #f2f4f8;
 
       .routes {
         max-height: 100vh;
+        transform: translateY(-1rem);
+        margin: 0 !important;
+        width: 100%;
         transition: all 0.2s ease;
         overflow: hidden !important;
 
@@ -65,6 +68,7 @@ $blue-gray: #f2f4f8;
         border-radius: 0.2rem;
         cursor: hand;
         cursor: pointer;
+        width: 100%;
 
         &:hover {
           background: rgba(0, 0, 0, 0.025);

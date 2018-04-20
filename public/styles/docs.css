@@ -28,6 +28,9 @@
         margin-bottom: 0.2rem; }
       .docs-wrapper .sidebar section .routes {
         max-height: 100vh;
+        transform: translateY(-1rem);
+        margin: 0 !important;
+        width: 100%;
         transition: all 0.2s ease;
         overflow: hidden !important; }
         .docs-wrapper .sidebar section .routes.hidden {
@@ -38,7 +41,8 @@
         margin: 0rem -0.4rem;
         border-radius: 0.2rem;
         cursor: hand;
-        cursor: pointer; }
+        cursor: pointer;
+        width: 100%; }
         .docs-wrapper .sidebar section .route:hover {
           background: rgba(0, 0, 0, 0.025); }
         .docs-wrapper .sidebar section .route:focus, .docs-wrapper .sidebar section .route:active {
