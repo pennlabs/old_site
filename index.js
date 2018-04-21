@@ -3,6 +3,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const body_parser = require('body-parser');
 const mongoose = require('mongoose');
+const showdown = require('showdown');
 const env = require('dotenv');
 const path = require('path');
 const models = require('./models');
@@ -20,7 +21,7 @@ app.engine('handlebars', handlebars({
   defaultLayout: 'main',
 }));
 app.set('view engine', 'handlebars');
-app.use('/static', express.static(path.join(__dirname, 'views/static')));
+app.use('static', express.static(path.join(__dirname, 'public')));
 
 models.connect(process.env.DB_URI);
 
@@ -55,6 +56,14 @@ app.get('/products', (req, res) => {
 
 app.get('/docs/api', (req, res) => {
   res.render('api');
+});
+
+app.get('/docs/api/:route', (req, res) => {
+  mongoose.model('Route').findOne({name: req.params.route}, (err, route) => {
+    const converter = new showdown.Converter();
+    route.markdown = converter.makeHtml(route.markdown);
+    res.render('route', route);
+  });
 });
 
 app.get('/mobile', (req, res) => {

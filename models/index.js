@@ -9,4 +9,5 @@ module.exports.connect = uri => {
   });
 
   require('./member');
+  require('./route');
 };
