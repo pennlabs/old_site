@@ -54,7 +54,7 @@ app.get('/products', (req, res) => {
 });
 
 app.get('/docs/api', (req, res) => {
-  res.render('docs_page');
+  res.render('api');
 });
 
 app.get('/mobile', (req, res) => {
@@ -75,6 +75,6 @@ app.listen(process.env.PORT, err => {
   if (err) {
     console.error(err);
   } else {
-    console.info("Peep port %s 🐷", process.env.PORT);
+    console.info("Peep port %s 🐷 (oink oink)", process.env.PORT);
   }
 });
