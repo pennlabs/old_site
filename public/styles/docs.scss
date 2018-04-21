@@ -21,10 +21,10 @@ $blue-gray: #f2f4f8;
     min-height: calc(100vh - 52px);
     min-width: 20vw;
 
-    section {
+    .sidebar-section {
       padding: 0.5rem 0rem;
 
-      & + section {
+      & + .sidebar-section {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
       }
 

@@ -8,11 +8,11 @@
     box-shadow: 0.1rem 0rem 0.3rem rgba(0, 0, 0, 0.1);
     min-height: calc(100vh - 52px);
     min-width: 20vw; }
-    .docs-wrapper .sidebar section {
+    .docs-wrapper .sidebar .sidebar-section {
       padding: 0.5rem 0rem; }
-      .docs-wrapper .sidebar section + section {
+      .docs-wrapper .sidebar .sidebar-section + .sidebar-section {
         border-top: 1px solid rgba(0, 0, 0, 0.1); }
-      .docs-wrapper .sidebar section .toggle {
+      .docs-wrapper .sidebar .sidebar-section .toggle {
         cursor: hand;
         cursor: pointer;
         transform: translateY(-2rem) translateX(-0.2rem) rotate(-45deg);
@@ -22,20 +22,20 @@
         border-bottom: 2px solid #209cee;
         float: right;
         transition: all 0.2s ease; }
-        .docs-wrapper .sidebar section .toggle.hidden {
+        .docs-wrapper .sidebar .sidebar-section .toggle.hidden {
           transform: translateY(-1.6rem) translateX(-0.2rem) rotate(135deg); }
-      .docs-wrapper .sidebar section h4 {
+      .docs-wrapper .sidebar .sidebar-section h4 {
         margin-bottom: 0.2rem; }
-      .docs-wrapper .sidebar section .routes {
+      .docs-wrapper .sidebar .sidebar-section .routes {
         max-height: 100vh;
         transform: translateY(-1rem);
         margin: 0 !important;
         width: 100%;
         transition: all 0.2s ease;
         overflow: hidden !important; }
-        .docs-wrapper .sidebar section .routes.hidden {
+        .docs-wrapper .sidebar .sidebar-section .routes.hidden {
           max-height: 0rem; }
-      .docs-wrapper .sidebar section .route {
+      .docs-wrapper .sidebar .sidebar-section .route {
         font-family: "Lucida Console", Monaco, monospace;
         padding: 0.4rem;
         border-radius: 0.2rem;
@@ -44,20 +44,20 @@
         text-overflow: ellipsis;
         overflow: auto;
         display: block; }
-        .docs-wrapper .sidebar section .route:hover {
+        .docs-wrapper .sidebar .sidebar-section .route:hover {
           background: rgba(0, 0, 0, 0.04); }
-        .docs-wrapper .sidebar section .route:focus, .docs-wrapper .sidebar section .route:active {
+        .docs-wrapper .sidebar .sidebar-section .route:focus, .docs-wrapper .sidebar .sidebar-section .route:active, .docs-wrapper .sidebar .sidebar-section .route.active {
           background: rgba(0, 0, 0, 0.06); }
-        .docs-wrapper .sidebar section .route span {
+        .docs-wrapper .sidebar .sidebar-section .route span {
           border-radius: 0.2rem;
           padding: 0.2rem 0.4rem;
           color: white;
           background: rgba(0, 0, 0, 0.05); }
-          .docs-wrapper .sidebar section .route span.get {
+          .docs-wrapper .sidebar .sidebar-section .route span.get {
             background: #76bf96; }
-          .docs-wrapper .sidebar section .route span.post {
+          .docs-wrapper .sidebar .sidebar-section .route span.post {
             background: #df5d56; }
-        .docs-wrapper .sidebar section .route p {
+        .docs-wrapper .sidebar .sidebar-section .route p {
           padding-bottom: 0.2rem;
           padding-top: 0.2rem;
           display: inline-block;
