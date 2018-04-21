@@ -15,7 +15,7 @@
       .docs-wrapper .sidebar section .toggle {
         cursor: hand;
         cursor: pointer;
-        transform: translateY(-2rem) translateX(-0.1rem) rotate(-45deg);
+        transform: translateY(-2rem) translateX(-0.2rem) rotate(-45deg);
         width: 1rem;
         height: 1rem;
         border-left: 2px solid #209cee;
@@ -23,7 +23,7 @@
         float: right;
         transition: all 0.2s ease; }
         .docs-wrapper .sidebar section .toggle.hidden {
-          transform: translateY(-1.6rem) translateX(0.1rem) rotate(135deg); }
+          transform: translateY(-1.6rem) translateX(-0.2rem) rotate(135deg); }
       .docs-wrapper .sidebar section h4 {
         margin-bottom: 0.2rem; }
       .docs-wrapper .sidebar section .routes {
@@ -38,15 +38,16 @@
       .docs-wrapper .sidebar section .route {
         font-family: "Lucida Console", Monaco, monospace;
         padding: 0.4rem;
-        margin: 0rem -0.4rem;
         border-radius: 0.2rem;
         cursor: hand;
         cursor: pointer;
-        width: 100%; }
+        text-overflow: ellipsis;
+        overflow: auto;
+        display: block; }
         .docs-wrapper .sidebar section .route:hover {
-          background: rgba(0, 0, 0, 0.025); }
+          background: rgba(0, 0, 0, 0.04); }
         .docs-wrapper .sidebar section .route:focus, .docs-wrapper .sidebar section .route:active {
-          background: rgba(0, 0, 0, 0.05); }
+          background: rgba(0, 0, 0, 0.06); }
         .docs-wrapper .sidebar section .route span {
           border-radius: 0.2rem;
           padding: 0.2rem 0.4rem;
