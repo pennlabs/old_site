@@ -2,22 +2,27 @@
 // $ node-sass public/styles/docs.scss public/styles/docs.css
 // From the root directory to compile this to css
 
+// Color palette used throughout the file
 $green: #76bf96;
 $red: #df5d56;
 $blue: #209cee;
 $blue-gray: #f2f4f8;
+$shadow: rgba(0, 0, 0, 0.1);
 
+// Style all API documentation pages
 .docs-wrapper {
   display: flex;
 
+  // Modular helper class
   .marg-bot {
     margin-bottom: 1.5rem;
   }
 
+  // Style the sidebar
   .sidebar {
     width: auto;
     padding: 1rem;
-    box-shadow: 0.1rem 0rem 0.3rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0.1rem 0rem 0.3rem $shadow;
     min-height: calc(100vh - 52px);
     min-width: 20vw;
 
@@ -25,7 +30,7 @@ $blue-gray: #f2f4f8;
       padding: 0.5rem 0rem;
 
       & + .sidebar-section {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: 1px solid $shadow;
       }
 
       .toggle {
@@ -37,6 +42,7 @@ $blue-gray: #f2f4f8;
         border-left: 2px solid $blue;
         border-bottom: 2px solid $blue;
         float: right;
+        margin-bottom: -1rem;
         transition: all 0.2s ease;
 
         &.hidden {
@@ -50,25 +56,25 @@ $blue-gray: #f2f4f8;
 
       .routes {
         max-height: 100vh;
-        transform: translateY(-1rem);
         margin: 0 !important;
         width: 100%;
         transition: all 0.2s ease;
         overflow: hidden !important;
+        margin-bottom: -1rem;
+        opacity: 1;
 
         &.hidden {
-          max-height: 0rem;
+          opacity: 0;
+          max-height: 0vh;
         }
       }
 
       .route {
         font-family: "Lucida Console", Monaco, monospace;
         padding: 0.4rem;
-        // margin: 0rem -0.4rem;
         border-radius: 0.2rem;
         cursor: hand;
         cursor: pointer;
-        // width: calc(100% + 0.8rem);
         text-overflow: ellipsis;
         overflow: auto;
         display: block;
@@ -108,12 +114,14 @@ $blue-gray: #f2f4f8;
     }
   }
 
+  // Make the docs take up the screen right of the sidebar
   .docs {
     flex: 1;
     padding: 1rem 5%;
     min-height: calc(100vh - 52px);
   }
 
+  // Style gray backer
   .gray {
     padding: 2rem;
     border-radius: 0.4rem;
@@ -143,6 +151,20 @@ $blue-gray: #f2f4f8;
       &:hover {
         background: rgba(0, 0, 0, 0.1);
       }
+    }
+  }
+}
+
+// Media queries for mobile responsiveness
+// TODO
+@media screen and (max-width: 948px) {
+  .docs-wrapper {
+    display: block;
+
+    .sidebar {
+      padding: 0rem 0.5rem;
+      min-height: inherit;
+      box-shadow: 0rem 0.2rem 0.2rem $shadow;
     }
   }
 }

@@ -21,6 +21,7 @@
         border-left: 2px solid #209cee;
         border-bottom: 2px solid #209cee;
         float: right;
+        margin-bottom: -1rem;
         transition: all 0.2s ease; }
         .docs-wrapper .sidebar .sidebar-section .toggle.hidden {
           transform: translateY(-1.6rem) translateX(-0.2rem) rotate(135deg); }
@@ -28,13 +29,15 @@
         margin-bottom: 0.2rem; }
       .docs-wrapper .sidebar .sidebar-section .routes {
         max-height: 100vh;
-        transform: translateY(-1rem);
         margin: 0 !important;
         width: 100%;
         transition: all 0.2s ease;
-        overflow: hidden !important; }
+        overflow: hidden !important;
+        margin-bottom: -1rem;
+        opacity: 1; }
         .docs-wrapper .sidebar .sidebar-section .routes.hidden {
-          max-height: 0rem; }
+          opacity: 0;
+          max-height: 0vh; }
       .docs-wrapper .sidebar .sidebar-section .route {
         font-family: "Lucida Console", Monaco, monospace;
         padding: 0.4rem;
@@ -84,3 +87,11 @@
       background: rgba(0, 0, 0, 0.075); }
       .docs-wrapper .gray .is-light:hover {
         background: rgba(0, 0, 0, 0.1); }
+
+@media screen and (max-width: 948px) {
+  .docs-wrapper {
+    display: block; }
+    .docs-wrapper .sidebar {
+      padding: 0rem 0.5rem;
+      min-height: inherit;
+      box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); } }
