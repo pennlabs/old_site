@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports.connect = uri => {
-  mongoose.connect(uri);
+  mongoose.connect(uri, { useNewUrlParser: true });
   
   mongoose.connection.on('error', err => {
     console.log(`Mongoose connection error: ${err}`);

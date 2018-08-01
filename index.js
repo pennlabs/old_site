@@ -3,13 +3,9 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const body_parser = require('body-parser');
 const mongoose = require('mongoose');
-const env = require('dotenv');
 const path = require('path');
 const models = require('./models');
 const app = express();
-
-// Configure environment variables
-env.config();
 
 // Configure the app environment
 app.use(body_parser.urlencoded({ extended: true }));
