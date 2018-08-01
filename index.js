@@ -18,6 +18,9 @@ app.engine('handlebars', handlebars({
 models.connect(process.env.DB_URI);
 
 const pageRoutes = require('./routes/pages');
+const apiRoutes = require('./routes/api');
+
+app.use('/api', apiRoutes);
 app.use('/', pageRoutes);
 
 app.listen(process.env.PORT, err => {
