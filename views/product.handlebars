@@ -1,0 +1,48 @@
+<section class="section" style="padding-top:1.5rem">
+  <div class="container" style="margin-top:0">
+    <a class="button is-rounded is-primary" href="/api">
+      <span class="icon" style="margin-right: 0.3rem">
+        <i class="fas fa-angle-double-left"></i>
+      </span>
+      Back to API
+    </a>
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <div class="card-content">
+            <p class="image is-48x48">
+               <img src="/img/PennBasics.png" />
+            </p>
+            <h1 style="font-weight:500; font-size:1.8rem">
+              {{name}}
+            </h1>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="{{url}}">
+                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                </a>
+                <a class="level-item" href="{{github}}">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <p>
+              {{description}}
+            </p>
+            <h1 style="font-weight:500; font-size:1.8rem; margin-bottom: 2rem"> Public API </h1>
+            <div class="card">
+                <div class="card-content">
+                    <p style="font-weight:500; font-size:1.5rem; margin-bottom: 0rem">General</p>
+                    <p> Used while testing to confirm client/server interactions (can also be used after implementing authentication to confirm valid user token).</p>
+                    <p style="font-weight:500; font-size:1rem; margin-bottom: 0.5rem">Sanity Check</p>
+                    <span class="tag is-info">Request</span> <code>GET <a href="https://api.pennbasics.com/">/api</a></code> <br>
+                    <span class="tag is-info">Response</span> <code> { message: "Welcome to the API." } </code>
+                </div>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
