@@ -7,7 +7,7 @@
 - body-parser
 
 ## Usage
-0. Create a file named `.env` containing `PORT` and `DB_URI`. 
+0. Add environment variables containing `PORT` and `DB_URI` (i.e. via sourcing `env.sh`). 
 1. `yarn` (install dependencies).
 2. `yarn begin` (if you have nodemon installed) or `yarn start` if you don't have `nodemon` installed.
 
