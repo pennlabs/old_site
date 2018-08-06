@@ -29,14 +29,12 @@
             <p>
               {{description}}
             </p>
-            <h1 style="font-weight:500; font-size:1.8rem; margin-bottom: 2rem"> Public API </h1>
+            <h1 style="font-weight:500; font-size:1.8rem; margin-bottom: 2rem"> {{ doc.title }} </h1>
             <div class="card">
                 <div class="card-content">
-                    <p style="font-weight:500; font-size:1.5rem; margin-bottom: 0rem">General</p>
-                    <p> Used while testing to confirm client/server interactions (can also be used after implementing authentication to confirm valid user token).</p>
-                    <p style="font-weight:500; font-size:1rem; margin-bottom: 0.5rem">Sanity Check</p>
-                    <span class="tag is-info">Request</span> <code>GET <a href="https://api.pennbasics.com/">/api</a></code> <br>
-                    <span class="tag is-info">Response</span> <code> { message: "Welcome to the API." } </code>
+                    <div class="generated">
+                      {{{ doc.body }}}
+                    </div>
                 </div>
             </div>
             <br>
