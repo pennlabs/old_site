@@ -10,4 +10,5 @@ module.exports.connect = uri => {
 
   require('./member');
   require('./documentation');
+  require('./update');
 };

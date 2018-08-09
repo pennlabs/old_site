@@ -30,8 +30,8 @@ app.get('/products', (req, res) => {
   res.render('products');
 });
 
-app.get('/docs/api', (req, res) => {
-  res.render('docs_page');
+app.get('/guides', (req, res) => {
+  res.render('guides');
 });
 
 app.get('/mobile', (req, res) => {
