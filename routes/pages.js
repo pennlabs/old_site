@@ -18,10 +18,6 @@ app.get('/team', (req, res) => {
   });
 });
 
-app.get('/contact', (req, res) => {
-  res.render('contact');
-});
-
 app.get('/docs', (req, res) => {
   res.render('docs');
 });
