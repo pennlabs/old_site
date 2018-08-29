@@ -30,6 +30,10 @@ app.get('/guides', (req, res) => {
   res.render('guides');
 });
 
+app.get('/apply', (req, res) => {
+  res.render('apply');
+});
+
 app.get('/mobile', (req, res) => {
   res.redirect('products');
 });
